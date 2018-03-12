@@ -1,0 +1,16 @@
+---
+layout: default
+title: Búsqueda
+---
+<section id="search">
+  <input type="text" id="search-input" placeholder="Buscar...">
+  <ul id="results-container"></ul>
+</section>
+<script src="{{ site.baseurl }}/public/js/search.js" type="text/javascript"></script>
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+})
+</script>
