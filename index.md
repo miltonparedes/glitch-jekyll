@@ -1,6 +1,38 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
+title: Home
 ---
+
+# A simple and cool theme for Jekyll and GitHub Pages.
+## Take a look at the source on [github](https://github.com/miltonolaf/glitch-jekyll).
+
+### About
+
+What's up? I'm [Milton](https://github.com/miltonolaf). I decided to start writing so design this cool theme for my [blog](http://miltonolaf.com), do you like it?
+
+You can use it however you want, as it is under [MIT License](https://github.com/MiltonOlaf/glitch-jekyll/blob/master/LICENSE).
+
+* [Installation]({{site.url}}).
+* [Markdown examples]({{site.url}}).
+* [Post example]({{site.url}}).
+
+---
+
+### Features
+
+* search
+* cool glitch title
+* responsive
+* snippets
+* archive
+* pagination
+* projects
+* social icons
+
+---
+
+### Contact
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Write me: [{{site.email}}](mailto:{{site.email}})
