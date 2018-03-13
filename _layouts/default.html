@@ -8,9 +8,9 @@
         <h1 class="masthead-title"><a href="{{ site.baseurl }}/" title="Home"><div class="glitch" data-text="{{ site.title }}">{{ site.title }}</div></a></h1>
         <nav>
           <ul>
-            <li><a class="{% if page.title == "Home" %} active{% endif %}" href="/">Home</a></li>
-            <li><a class="{% if page.title == "Posts" %} active{% endif %}" href="/writing/">Writing</a></li>
-            <li><a class="{% if page.title == "Proyectos" %} active{% endif %}" href="/projects/">Projects</a></li>
+            <li><a class="{% if page.title == "Home" %} active{% endif %}" href="{{ site.baseurl }}/">Home</a></li>
+            <li><a class="{% if page.title == "Posts" %} active{% endif %}" href="{{ site.baseurl }}/writing/">Writing</a></li>
+            <li><a class="{% if page.title == "Proyectos" %} active{% endif %}" href="{{ site.baseurl }}/projects/">Projects</a></li>
             {% if page.submenu %}
             <li>
               <ul class="submenu">
@@ -22,7 +22,7 @@
           </ul>
         </nav>
       </header>
-      <main>
+      <main id="{{ page.title | downcase }}">
         {{ content }}
       </main>
 
