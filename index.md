@@ -8,13 +8,13 @@ title: Home
 
 ### About
 
-What's up? I'm [Milton](https://github.com/miltonolaf). I decided to start writing so design this cool theme for my [blog](http://miltonolaf.com), do you like it?
+What's up? I'm [Milton](https://github.com/miltonolaf "My github profile"). I decided to start writing so design this cool theme for my [blog](http://miltonolaf.com "My blog"), do you like it?
 
 You can use it however you want, as it is under [MIT License](https://github.com/MiltonOlaf/glitch-jekyll/blob/master/LICENSE).
 
-* [Installation]({{site.url}}).
-* [Markdown examples]({{site.url}}).
-* [Post example]({{site.url}}).
+* [installation]({{site.url}})
+* [markdown examples]({{site.url}})
+* [post example]({{site.url}})
 
 ---
 
