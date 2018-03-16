@@ -1,0 +1,46 @@
+---
+layout: default
+title: Archive
+submenu: true
+---
+<div id="archive">
+  <nav>
+    <li><a href="#all">All</a></li>
+    {% for category in site.categories %}
+    <li><a href="#{{ category | first | replace: ' ','-' }}">{{ category | first }}</a></li>
+    {% endfor %}
+  </nav>
+  <div class="catbloc" id="all">
+    {% for post in site.posts %}
+      {% assign currentDate = post.date | date: "%Y" %}
+      {% if currentDate != myDate %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <h1>{{ currentDate }}</h1>
+        <ul>
+        {% assign myDate = currentDate %}
+      {% endif %}
+      <li><time>{{ post.date | date: "%-d %B %Y" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+  </div>
+
+  {% for category in site.categories %}
+      <div class="catbloc" id="{{ category | first | replace: ' ','-' }}">
+          <h2>{{ category | first }}</h2>
+          <ul>
+             {% for posts in category %}
+               {% for post in posts %}
+                 {% if post.url %}
+                   <li>
+                     <time>{{ post.date | date: "%-d %B %Y" }}</time>
+                     <a href="{{ post.url }}">
+                       {{ post.title }}
+                     </a>
+                   </li>
+                 {% endif %}
+               {% endfor %}
+             {% endfor %}
+          </ul>
+      </div>
+  {% endfor %}
+</div>
