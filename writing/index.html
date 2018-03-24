@@ -1,0 +1,46 @@
+---
+layout: default
+title: Writing
+submenu: true
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    {{ post.excerpt }}
+    {% capture content_words %}
+      {{ post.content | number_of_words }}
+    {% endcapture %}
+    {% capture excerpt_words %}
+      {{ post.excerpt | number_of_words }}
+    {% endcapture %}
+    {% if excerpt_words != content_words %}
+    <p><a class="btn btn-sm btn-primary" href="{{ post.url }}" role="button">Leer más <i class="fa fa-arrow-circle-right"></i></a>
+    </p>
+{% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/posts/page{{paginator.next_page}}">Más antiguo</a>
+  {% else %}
+    <span class="pagination-item older">Más antiguo</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/posts">Más reciente</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/posts/page{{paginator.previous_page}}">Más reciente</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Más reciente</span>
+  {% endif %}
+</div>
