@@ -9,10 +9,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: $gray-3;
   text-rendering: optimizeLegibility;
+  a{
+    border-bottom-color: $gray-3;
+  }
 }
 
 h1 {
   font-size: 2rem;
+  a{
+    border-bottom: 0;
+  }
 }
 
 h2 {

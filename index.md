@@ -8,7 +8,7 @@ title: Home
 
 ### About
 
-What's up? I'm [Milton](https://github.com/miltonolaf "My github profile"). I decided to start writing so design this cool theme for my [blog](http://miltonolaf.com "My blog"), do you like it?
+What's up? I'm [Milton](https://github.com/miltonolaf "My github profile"){:target="blank"}. I decided to start writing so design this cool theme for my [blog](http://miltonolaf.com "My blog"){:target="blank"}, do you like it?
 
 You can use it however you want, as it is under MIT License.
 
