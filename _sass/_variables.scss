@@ -1,4 +1,4 @@
-$gray-1: #565656;
+$gray-1: #bcbcbc;
 $gray-2: #484848;
 $gray-3: #393939;
 $gray-4: #2b2b2b;
@@ -17,11 +17,11 @@ $cyan: #75b5aa;
 $blue: #268bd2;
 $brown: #8f5536;
 
-$root-font-family: Athelas, Georgia, serif;
+$h-font: Athelas, Georgia, serif;
+
+$root-font-family: 'Source Sans Pro', sans-serif;
 $root-font-size: 16px;
 $root-line-height: 1.5;
-
-$list-font: "Roboto Mono", monospace;
 
 $body-color: $gray-3;
 $body-bg: #fff;
@@ -32,5 +32,5 @@ $border-color: #e5e5e5;
 $large-breakpoint: 38em;
 $large-font-size: 20px;
 
-$code-font-family: Menlo, Monaco, "Courier New", monospace;
+$code-font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 $code-color: #bf616a;

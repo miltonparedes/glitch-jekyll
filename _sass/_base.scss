@@ -39,17 +39,20 @@ a {
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    text-decoration: underline;
+    border-bottom: 1px solid;
   }
 
   strong {
     color: inherit;
   }
 }
+ul{
+  padding-left: 0;
+}
 li, p{
   a{
     color: inherit;
-    text-decoration: underline;
+    border-bottom: 1px solid;
   }
 }
 

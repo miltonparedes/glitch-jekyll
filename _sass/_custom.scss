@@ -9,15 +9,15 @@
     list-style: none;
     li{
       display: inline-flex;
-      font-family: $list-font;
+      font-family: $code-font-family;
       padding: 0;
       font-size: .8rem;
-      color: $gray-3;
+      color: $gray-2;
     }
     li ~ li::before{
       content: '/';
       padding: 0 10px;
-      color: $gray-2;
+      color: $gray-1;
     }
   }
   hr{
