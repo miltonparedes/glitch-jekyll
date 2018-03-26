@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+in_nav: 0
 ---
 
 # A <span class="mark">simple and cool theme</span> for Jekyll and GitHub Pages.

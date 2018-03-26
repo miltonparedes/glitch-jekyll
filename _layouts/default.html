@@ -6,21 +6,7 @@
     <div class="container content">
       <header>
         <h1 class="masthead-title"><a href="{{ site.baseurl }}/" title="Home"><div class="glitch" data-text="{{ site.title }}">{{ site.title }}</div></a></h1>
-        <nav>
-          <ul>
-            <li><a class="{% if page.title == "Home" %}active{% endif %}" href="{{ site.baseurl }}/">Home</a></li>
-            <li><a class="{% if page.title == "Writing" or page.title == "Search" or page.title == "Archive" %}active{% endif %}" href="{{ site.baseurl }}/writing/">Writing</a></li>
-            <li><a class="{% if page.title == "Projects" %}active{% endif %}" href="{{ site.baseurl }}/projects/">Projects</a></li>
-            {% if page.submenu %}
-            <li>
-              <ul class="subnav">
-                <li><a href="{{ site.baseurl }}/archive#all">archive</a></li>
-                <li><a href="{{ site.baseurl }}/search">Search</a></li>
-              </ul>
-            </li>
-            {% endif %}
-          </ul>
-        </nav>
+        {% include nav.html %}
       </header>
       <main id="{{ page.title | downcase }}">
         {{ content }}

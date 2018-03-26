@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+    {% assign pages_list = site.pages | uniq: "title" | sort: "in_nav" %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" or node.layout == "default" and node.in_nav %}
+            <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% if page.submenu %}
+    <li>
+      <ul class="subnav">
+        <li><a href="{{ site.baseurl }}/archive#all">archive</a></li>
+        <li><a href="{{ site.baseurl }}/search">Search</a></li>
+      </ul>
+    </li>
+    {% endif %}
+  </ul>
+  {{test}}
+</nav>
