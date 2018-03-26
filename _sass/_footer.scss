@@ -1,3 +1,21 @@
 footer{
-  padding: 2rem;
+  min-width: 100% !important;
+  background: #f9f9f9;
+  padding: 3rem;
+  margin-top: 4rem;
+  text-align: center;
+  ul{
+    text-align: center;
+    margin-bottom: 1rem;
+    li{
+      display: inline-block;
+      padding: 0;
+      font-size: .8rem;
+    }
+    li ~ li::before{
+      content: '/';
+      padding: 0 5px;
+      color: $gray-1;
+    }
+  }
 }

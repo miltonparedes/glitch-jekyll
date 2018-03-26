@@ -1,0 +1,21 @@
+<footer>
+  <div class="container">
+    <ul>
+      {% assign social = site.social %}
+      {% if social.twitter %}<li><a href="//twitter.com/{{social.twitter}}" target="_blank"><i data-feather="twitter"></i></a></li>{% endif %}
+      {% if social.facebook %}<li><a href="//facebook.com/{{social.facebook}}" target="_blank"><i data-feather="facebook"></i></a></li>{% endif %}
+      {% if social.instagram %}<li><a href="//instagram.com/{{social.instagram}}" target="_blank"><i data-feather="instagram"></i></a></li>{% endif %}
+      {% if social.github %}<li><a href="//github.com/{{social.github}}" target="_blank"><i data-feather="github"></i></a></li>{% endif %}
+      {% if social.gitlab %}<li><a href="//codepen.io/{{social.codepen}}" target="_blank"><i data-feather="gitlab"></i></a></li>{% endif %}
+      {% if social.youtube_user %}<li><a href="//youtube.com/user/{{social.youtube_user}}" target="_blank"><i data-feather="youtube"></i></a></li>{% endif %}
+      {% if social.youtube_channel %}<li><a href="//youtube.com/channel/{{social.youtube_channel}}" target="_blank"><i data-feather="youtube"></i></a></li>{% endif %}
+      {% if social.codepen %}<li><a href="//codepen.io/{{social.codepen}}" target="_blank"><i data-feather="codepen"></i></a></li>{% endif %}
+    </ul>
+    <small>
+      &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+    </small>
+  </div>
+</footer>
+<script>
+  feather.replace()
+</script>

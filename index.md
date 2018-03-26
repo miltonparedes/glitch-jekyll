@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# A simple and cool theme for Jekyll and GitHub Pages.
+# A <span class="mark">simple and cool theme</span> for Jekyll and GitHub Pages.
 ## Take a look at the source on [github](https://github.com/miltonolaf/glitch-jekyll){:target="blank"}.
 
 ### About
