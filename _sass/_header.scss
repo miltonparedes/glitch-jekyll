@@ -17,12 +17,18 @@ header {
         font-size: 1rem;
 
         a{
+          background: transparent;
           color: $gray-4;
-          border-bottom: 0;
+          padding: 0;
+          border-radius: 0;
+          &:hover{
+            color: $gray-4;
+            border-bottom: 2px solid $gray-4;
+          }
         }
       }
       .subnav{
-        display: inline-flex;
+        display: inline-block;
         margin-bottom: 0;
         li{
           font-family: $code-font-family;

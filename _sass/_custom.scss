@@ -23,4 +23,10 @@
   hr{
     margin: 3rem 0;
   }
+  .mark{
+    background-image: linear-gradient(-100deg,hsla(58,92%,75%,.3),hsla(58,92%,75%,.7) 95%,hsla(58,92%,75%,.1));
+    border-radius: 1em 0;
+    padding: 0 .35em;
+    margin: 0 -.35em;
+  }
 }
