@@ -4,7 +4,7 @@
 
 header {
   padding-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   nav{
     ul{
       text-transform: lowercase;
@@ -12,9 +12,9 @@ header {
       li{
         display: inline-block;
         padding-right: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         list-style: none;
-        font-size: 1rem;
+        font-size: 1.08rem;
         a{
           background: transparent;
           color: $gray-4;
