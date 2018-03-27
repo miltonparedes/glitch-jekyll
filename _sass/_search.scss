@@ -1,0 +1,18 @@
+#search{
+  padding: 0 0 10vh;
+  input{
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.2s ease-in-out;
+    padding: 20px;
+    &:focus{
+      border: 1px solid #444;
+    }
+  }
+  time{
+    font-size: .8rem;
+    color: #888;
+  }
+}
