@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+permalink: projects
 in_nav: 2
 ---
 
