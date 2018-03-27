@@ -9,7 +9,7 @@ submenu: true
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
+      <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
@@ -22,7 +22,7 @@ submenu: true
       {{ post.excerpt | number_of_words }}
     {% endcapture %}
     {% if excerpt_words != content_words %}
-    <p><a class="btn btn-sm btn-primary" href="{{ post.url }}" role="button">Leer más <i class="fa fa-arrow-circle-right"></i></a>
+    <p><a class="btn btn-sm btn-primary" href="{{ site.baseurl }}{{ post.url }}" role="button">Leer más <i class="fa fa-arrow-circle-right"></i></a>
     </p>
 {% endif %}
   </div>
