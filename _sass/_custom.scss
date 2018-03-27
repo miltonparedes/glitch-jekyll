@@ -30,3 +30,90 @@
     margin: 0 -.35em;
   }
 }
+#projects{
+  h1{
+    margin: 0 0 1.5rem;
+  }
+  ul{
+    width: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    li{
+      width: 226.333px;
+      list-style: none;
+      background-color: #f9f9f9;
+      text-align: center;
+      border-radius: 5px;
+      padding: 1rem;
+      img{
+        max-width: 70px;
+        max-height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      ul{
+        text-align: center;
+        display: block;
+        grid-template-columns: none;
+        grid-gap: 0;
+        overflow: hidden;
+        margin-bottom: 0;
+        li{
+          height: auto;
+          background: transparent;
+          width: auto;
+          font-size: .8rem;
+          padding: .5rem;
+          &:first-child{
+            font-size: 1rem;
+          }
+          &:first-child:hover{
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+          }
+          ul{
+            li{
+              display: inline-block;
+              height: auto;
+              background: transparent;
+              width: auto;
+              padding: 1rem 0 0;
+              opacity: 0.6;
+              &:hover{
+                -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                transform: scale(1.05);
+              }
+              a{
+                padding: 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: transparent;
+              }
+              &:first-child{
+                font-size: 1.2rem;
+                a{
+                  background-image: url("../img/link.svg");
+                }
+              }
+              &:last-child{
+                font-size: 1.2rem;
+                a{
+                  background-image: url("../img/repo.svg");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // disable another css
+  .page li + li, .post li + li {
+    margin-top: 0;
+  }
+}
