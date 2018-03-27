@@ -11,16 +11,16 @@ header {
       text-transform: lowercase;
       padding: 0;
       li{
-        display: inline;
+        display: inline-block;
         padding-right: 1rem;
         list-style: none;
         font-size: 1rem;
-
         a{
           background: transparent;
           color: $gray-4;
           padding: 0;
           border-radius: 0;
+          border-bottom: 0;
           &:hover{
             color: $gray-4;
             border-bottom: 2px solid $gray-4;

@@ -11,6 +11,13 @@ footer{
       display: inline-block;
       padding: 0;
       font-size: .8rem;
+      a{
+        border-bottom: 0;
+        &:hover{
+          color: darken($gray-4, 20%);
+          border-bottom: 0;
+        }
+      }
     }
     li ~ li::before{
       content: '/';
