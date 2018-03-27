@@ -4,7 +4,7 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" or node.layout == "default" and node.in_nav %}
-            <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{ node.url }}">{{ node.title }}</a></li>
+            <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
           {% endif %}
         {% endif %}
       {% endfor %}
