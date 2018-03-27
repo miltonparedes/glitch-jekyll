@@ -4,7 +4,7 @@ title: Home
 in_nav: 0
 ---
 
-# A <span class="mark">simple and cool theme</span> for Jekyll and GitHub Pages.
+# A simple and cool theme for Jekyll and GitHub Pages.
 ## Take a look at the source on [github](https://github.com/miltonolaf/glitch-jekyll){:target="blank"}.
 
 ### About
