@@ -6,9 +6,14 @@
 .page,
 .post {
   margin-bottom: 4em;
-
+  ul{
+    padding-left: 2rem;
+  }
   li + li {
     margin-top: .25rem;
+  }
+  p{
+    text-align: justify;
   }
 }
 
@@ -54,13 +59,10 @@
       font-size: 75%;
       color: #999;
     }
-
-    a:hover {
-      color: #268bd2;
-      text-decoration: none;
-
-      small {
-        color: inherit;
+    a{
+      border-bottom-color: inherit;
+      &:hover {
+        border-bottom-color: $pink;
       }
     }
   }
