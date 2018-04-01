@@ -1,5 +1,6 @@
 <nav>
   <ul>
+    <li><a href=""><div class="glitch" data-text="Glt">Glt</div></a></li>
     {% assign pages_list = site.pages | uniq: "title" | sort: "in_nav" %}
       {% for node in pages_list %}
         {% if node.title != null %}

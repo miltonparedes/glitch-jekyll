@@ -3,18 +3,29 @@
 // Super small header above the content for site name and short description.
 
 header {
-  padding-top: 1rem;
-  margin-bottom: 3.5rem;
+  height: 70px !important;
+  padding: 0 1.5rem 0;
+  display: flex;
   nav{
+    .glitch{
+      padding: 0 10px;
+      font-size: 30px;
+      text-transform: capitalize;
+      border: 1px solid $gray-3;
+    }
+    .glitch::after, .glitch::before{
+      padding: 0 .5rem;
+    }
     ul{
       text-transform: lowercase;
       padding: 0;
+      margin: 11.5px 0 0;
       li{
+        vertical-align: middle;
         display: inline-block;
         padding-right: 1rem;
-        margin-bottom: .5rem;
         list-style: none;
-        font-size: 1.08rem;
+        font-size: 20px;
         a{
           background: transparent;
           color: $gray-4;

@@ -1,6 +1,15 @@
 #home{
+  .hero{
+    background: $body-bg-alter;
+    min-width: 100%;
+    height: calc(100vh - 70px);
+    padding-top: calc((50vh - 70px) - 8rem)
+  }
+  .glitch::after, .glitch::before{
+    background: $body-bg-alter;
+  }
   h2{
-    margin: 0 0 20vh;
+    margin: 0;
   }
   h3, p, ul{
     text-align: center;

@@ -2,16 +2,14 @@
 <html lang="en">
   {% include head.html %}
   <body>
-
-    <div class="container content">
-      <header>
-        <h1 class="masthead-title"><a href="{{ site.baseurl }}/" title="Home"><div class="glitch" data-text="{{ site.title }}">{{ site.title }}</div></a></h1>
-        {% include nav.html %}
-      </header>
+    <header>
+      {% include nav.html %}
+    </header>
+    {% if page.title != "Home" %}<div class="container content">{% endif %}
       <main id="{{ page.title | downcase }}">
         {{ content }}
       </main>
-    </div>
+    {% if page.title != "Home" %}</div>{% endif %}
     {% include footer.html %}
 
     {% if site.analytics_id %}
