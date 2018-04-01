@@ -4,9 +4,11 @@
 
 header {
   height: 70px !important;
-  padding: 0 1.5rem 0;
-  display: flex;
+  padding: 11.5px 0 0;
+  overflow: hidden;
+  overflow-x: auto;
   nav{
+    width: $nav-breakpoint;
     .glitch{
       padding: 0 10px;
       font-size: 30px;
@@ -18,14 +20,17 @@ header {
     }
     ul{
       text-transform: lowercase;
-      padding: 0;
-      margin: 11.5px 0 0;
+      padding: 0 1.5rem 0;
+      margin: 0;
       li{
         vertical-align: middle;
         display: inline-block;
         padding-right: 1rem;
         list-style: none;
         font-size: 20px;
+        &:last-child{
+          padding-right: 0;
+        }
         a{
           background: transparent;
           color: $gray-4;

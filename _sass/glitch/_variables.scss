@@ -31,7 +31,7 @@ $link-color: darken($blue, 9%);
 
 
 // h* fonts
-$h-font: serif;
+$h-font: 'Frank Ruhl Libre', serif;
 
 
 // Lists
@@ -45,6 +45,7 @@ $border-color: #e5e5e5;
 // Responsive
 $large-breakpoint: 38em;
 $large-font-size: 20px;
+$nav-breakpoint: 370px; // Aprox. 4 element in nav
 
 
 // Code

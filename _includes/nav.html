@@ -1,10 +1,10 @@
+{% assign pages_list = site.pages | uniq: "title" | sort: "in_nav" %}
 <nav>
   <ul>
-    <li><a href=""><div class="glitch" data-text="Glt">Glt</div></a></li>
-    {% assign pages_list = site.pages | uniq: "title" | sort: "in_nav" %}
+    <li><a href="{{site.baseurl}}/"><div class="glitch" data-text="Glt">Glt</div></a></li>
       {% for node in pages_list %}
         {% if node.title != null %}
-          {% if node.layout == "page" or node.layout == "default" and node.in_nav %}
+          {% if node.in_nav %}
             <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
           {% endif %}
         {% endif %}
