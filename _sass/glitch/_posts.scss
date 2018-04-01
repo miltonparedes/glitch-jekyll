@@ -21,7 +21,10 @@
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: $gray-3;
+}
+.post-title a:hover{
+  border-bottom-color: $gray-3;
 }
 .page-title,
 .post-title {
@@ -62,7 +65,7 @@
     a{
       border-bottom-color: inherit;
       &:hover {
-        border-bottom-color: $pink;
+        border-bottom-color: $li-link-color-border;
       }
     }
   }

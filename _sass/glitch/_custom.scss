@@ -5,6 +5,12 @@
   h3, p, ul{
     text-align: center;
   }
+  p a{
+    border-bottom-color: $li-link-color-border;
+    &:hover{
+      border-bottom-color: inherit;
+    }
+  }
   ul{
     list-style: none;
     li{
