@@ -5,6 +5,10 @@
     height: calc(100vh - 70px);
     padding-top: calc((50vh - 70px) - 7rem)
   }
+  .title{
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
   .glitch::after, .glitch::before{
     background: $body-bg-alter;
   }
@@ -27,6 +31,9 @@
       vertical-align: middle;
     }
   }
+  #about{
+    padding-top: 2rem;
+  }
   h1, h2{
     margin: 0;
   }
@@ -46,7 +53,7 @@
       font-family: $code-font-family;
       padding: 0;
       font-size: .8rem;
-      color: $gray-2;
+      color: $gray-3;
       a{
         background-color: #f9f9f9;
         color: $li-link-color;
