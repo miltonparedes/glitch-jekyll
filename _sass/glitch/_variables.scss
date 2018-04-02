@@ -1,9 +1,9 @@
 // Gray
 $gray-1: #bcbcbc;
-$gray-2: #484848;
-$gray-3: #393939;
-$gray-4: #2b2b2b;
-$gray-5: #1c1c1c;
+$gray-2: #878787;
+$gray-3: #686868;
+$gray-4: #3b3b3b;
+$gray-5: #2b2b2b;
 // #565656
 // #484848
 // #393939
@@ -21,7 +21,7 @@ $root-font-family: 'Source Sans Pro', sans-serif;
 $root-font-size: 16px;
 $root-line-height: 1.5;
 
-$body-color: $gray-3;
+$body-color: $gray-4;
 $body-bg: #fff;
 $body-bg-alter: #f7fbfb;
 
@@ -36,7 +36,7 @@ $h-font: 'Frank Ruhl Libre', serif;
 
 // Lists
 $li-color: lighten($body-color, 5%);
-$li-link-color: lighten($gray-3, 10%);
+$li-link-color: lighten($gray-4, 10%);
 $li-link-color-border: $pink;
 
 $border-color: #e5e5e5;
