@@ -2,14 +2,12 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <header>
-      {% include nav.html %}
-    </header>
-    {% if page.title != "Home" %}<div class="container content">{% endif %}
-      <main id="{{ page.title | downcase }}">
+    {% include header.html %}
+    <main id="{{ page.title | downcase | replace: " ", "-" }}">
+    {% if page.title != "Home" %}<div class="container">{% endif %}
         {{ content }}
-      </main>
     {% if page.title != "Home" %}</div>{% endif %}
+    </main>
     {% include footer.html %}
 
     {% if site.analytics_id %}

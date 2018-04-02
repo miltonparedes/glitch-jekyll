@@ -1,0 +1,36 @@
+{% assign pages_list = site.pages | uniq: "title" | sort: "in_nav" %}
+<header>
+  <nav>
+    <ul>
+      <li><a href="{{site.baseurl}}/"><div class="glitch" data-text="Glt">Glt</div></a></li>
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.in_nav %}
+              <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+    </ul>
+    {{test}}
+  </nav>
+</header>
+{% if page.title != "Home" %}
+<div class="sub-header">
+  <div class="container">
+    <div class="inline-header">
+      <h1>{{page.title}}</h1>
+      <ul>
+        {% if page.submenu %}
+        <li><a href="{{ site.baseurl }}/archive#all">archive</a></li>
+        <li><a href="{{ site.baseurl }}/search">search</a></li>
+        {% endif %}
+        {% if page.layout == "post"  %}
+        {% for node in page.categories %}
+        <li><a href="{{site.baseurl}}/archive#{{ node | replace: ' ','-' }}">{{ node }}</a></li>
+        {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
