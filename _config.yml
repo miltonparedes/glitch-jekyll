@@ -22,12 +22,10 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-baseurl: "/glitch-jekyll" # the subpath of your site, e.g. /blog
-url: "http://miltonolaf.com/glitch-jekyll" # the base hostname & protocol for your site, e.g. http://example.com
-# baseurl: "/glitch-jekyll" # the subpath of your site, e.g. /blog
-# url: "http://miltonolaf.com/glitch-jekyll" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-paginate: 1
+paginate: 3
 paginate_path: "/writing/:num/"
 
 # Social users - twitter, instagram, github, gitlab, codepen profile, youtube and facebook
@@ -42,6 +40,7 @@ social:
   facebook: miltonolaf
   instagram: username
 
+
 favicon: "favicon.png" # favicon name in assets/img/
 
 # Assets
@@ -52,10 +51,6 @@ sass:
 
 # Build settings
 markdown: kramdown
-theme: minima
-kramdown:
-  auto_ids: false
-
 gems:
   - jekyll-feed
   - jekyll-paginate
