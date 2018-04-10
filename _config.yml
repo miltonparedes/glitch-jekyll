@@ -10,8 +10,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/glitch-jekyll" # the subpath of your site, e.g. /blog
 url: "http://miltonolaf.com/glitch-jekyll" # the base hostname & protocol for your site, e.g. http://example.com
 
-paginate: 3
-paginate_path: "/writing/:num/"
+paginate: 5
+paginate_path: /blog/:num/
 
 # Social users - twitter, instagram, github, gitlab, codepen profile, youtube and facebook
 social:
@@ -26,7 +26,7 @@ social:
   instagram: username
 
 
-favicon: "favicon.png" # favicon name in assets/img/
+favicon: favicon.png # favicon name in assets/img/
 
 # Assets - We specify the directory for Jekyll so we can use @imports.
 sass:

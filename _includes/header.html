@@ -1,35 +1,43 @@
 {% assign pages_list = site.pages | uniq: "title" | sort: "in_nav" %}
-<header>
-  <nav>
-    <ul>
-      <li><a href="{{site.baseurl}}/"><div class="glitch" data-text="Glt">Glt</div></a></li>
-        {% for node in pages_list %}
-          {% if node.title != null %}
-            {% if node.in_nav %}
-              <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
+<header class="header{% if page.nav_invert %} invert{% endif %}">
+  <div class="container">
+    <nav>
+      <ul>
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if node.in_nav %}
+                <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
-    </ul>
-    {{test}}
-  </nav>
+          {% endfor %}
+      </ul>
+      {{test}}
+    </nav>
+  </div>
 </header>
 {% if page.title != "Home" %}
-<div class="sub-header">
+<div class="sub-header{% if page.layout == "post" %} header-post{% endif %}"{% if page.layout == "post" %}style="background-image: url({{ site.baseurl }}{{ page.cover }})"{% endif %}>
   <div class="container">
     <div class="inline-header">
-      <h1>{{page.title}}</h1>
+      {% if page.layout == "post"%}
+      <h1><span class="m">{{page.title}}</span></h1>
+      {% else %}
+      <h1 class="title"><div class="glitch-text" data-text="{{ page.title }}">{{ page.title }}</div></h1>
+      {% endif %}
       <ul>
         {% if page.submenu %}
         <li><a href="{{ site.baseurl }}/archive#all">archive</a></li>
         <li><a href="{{ site.baseurl }}/search">search</a></li>
         {% endif %}
         {% if page.layout == "post"  %}
-        {% for node in page.categories %}
-        <li><a href="{{site.baseurl}}/archive#{{ node | replace: ' ','-' }}">{{ node }}</a></li>
-        {% endfor %}
+        <div class="m">
+          {% for node in page.categories %}
+          <li><a href="{{site.baseurl}}/archive#{{ node | replace: ' ','-' }}">{{ node }}</a></li>
+          {% endfor %}
+        </div>
         {% endif %}
       </ul>
+      <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix><feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite></filter></defs></svg>
     </div>
   </div>
 </div>

@@ -14,7 +14,20 @@
     text-align: justify;
   }
 }
-
+.header-post{
+  background-position: center;
+  background-size: cover;
+  padding: 7rem 0;
+  .m{
+    -webkit-filter: url("#goo");
+    filter: url("#goo");
+    background: #fff;
+    color: #111;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 7px 13px 5px;
+  }
+}
 // Blog post or page title
 .page-title,
 .post-title,

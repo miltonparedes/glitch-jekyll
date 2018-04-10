@@ -1,0 +1,27 @@
+tensorflow:
+  title: Tensorflow
+  img_url: /assets/img/tensorflow.png
+  description: An open-source machine learning framework for everyone.
+  web: https://tensorflow.org/
+  repo: https://github.com/tensorflow/tensorflow
+
+glitch-theme:
+  title: Glitch Theme
+  img_url: /assets/img/favicon.png
+  description: A simple and cool theme for Jekyll and GitHub Pages.
+  web: http://miltonolaf.com/glitch-jekyll
+  repo: https://github.com/miltonolaf/glitch-jekyll
+
+poole:
+  title: Poole
+  img_url: /assets/img/poole.png
+  description: Poole is the butler for Jekyll, the static site generator.
+  web: http://getpoole.com/
+  repo: https://github.com/poole/poole
+
+feather:
+  title: Feather Icons
+  img_url: /assets/img/feather.png
+  description: Feather is a collection of simply beautiful open source icons.
+  web: https://feathericons.com/
+  repo: https://github.com/feathericons/feather
