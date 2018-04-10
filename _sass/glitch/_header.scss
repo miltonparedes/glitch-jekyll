@@ -2,57 +2,56 @@
 //
 // Super small header above the content for site name and short description.
 
-header {
+.header{
   height: 70px !important;
-  padding: 11.5px 0 0;
-  overflow: hidden;
+  background: $body-bg;
   overflow-x: auto;
   nav{
-    width: $nav-breakpoint;
-    .glitch{
-      padding: 0 10px;
-      font-size: 30px;
-      text-transform: capitalize;
-      border: 1px solid $gray-3;
-    }
-    .glitch::after, .glitch::before{
-      padding: 0 .5rem;
-    }
+    position: relative;
+    min-width: 100%;
+    z-index: 10;
     ul{
-      text-transform: lowercase;
-      padding: 0 0 0 1.5rem;
+      display: flex;
+      padding: 0;
+      line-height: 70px;
+      font-weight: bold;
+      text-transform: uppercase;
+      vertical-align: middle;
       margin: 0;
       li{
-        vertical-align: middle;
-        display: inline-block;
-        padding-right: 1rem;
+        letter-spacing: .25em;
+        margin-right: 1.5rem;
         list-style: none;
-        font-size: 20px;
+        font-size: 14px;
         &:last-child{
-          padding-right: 0;
+          margin-right: 0;
         }
         a{
-          background: transparent;
           color: $gray-4;
-          padding: 0;
-          border-radius: 0;
           border-bottom: 0;
           &:hover{
-            color: $gray-4;
-            border-bottom: 2px solid $gray-4;
+            color: $pink;
           }
         }
       }
     }
   }
   .active{
-    border-bottom: 2px solid;
+    color: $pink;
   }
 }
 .sub-header{
   background: $body-bg-alter;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0 2.5rem 0;
   margin-bottom: 2rem;
+  .title{
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 2.2rem;
+    .glitch-text::after, .glitch-text::before{
+      background: $body-bg-alter;
+    }
+  }
   .inline-header{
     display: flex;
     flex-wrap: wrap;
