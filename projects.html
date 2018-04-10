@@ -1,0 +1,23 @@
+---
+layout: default
+title: Projects
+permalink: projects
+in_nav: 2
+---
+<div class="feed">
+  {% for project in site.data.projects %}
+      <article class="project-card">
+        <a class="card-image-link" href="{{ project[1].web }}" target="_blank">
+          <img src="{{project[1].img_url}}" alt="">
+        </a>
+        <div class="card-content">
+          <div class="post-card-header">
+              <h3 class="post-card-title">{{ project[1].title }}</h3>
+          </div>
+          <div class="post-card-excerpt">
+              <p>{{ project[1].description | strip_html | truncatewords: 10, "" }}</p>
+          </div>
+        </div>
+      </article>
+  {% endfor %}
+</div>
