@@ -1,19 +1,4 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+# Website info
 title: Glitch Theme
 tagline: A simple and cool theme for Jekyll and GitHub Pages.
 email: your-email@domain.com
@@ -25,8 +10,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-paginate: 3
-paginate_path: "/writing/:num/"
+paginate: 5
+paginate_path: /blog/:num/
 
 # Social users - twitter, instagram, github, gitlab, codepen profile, youtube and facebook
 social:
@@ -41,10 +26,9 @@ social:
   instagram: username
 
 
-favicon: "favicon.png" # favicon name in assets/img/
+favicon: favicon.png # favicon name in assets/img/
 
-# Assets
-# We specify the directory for Jekyll so we can use @imports.
+# Assets - We specify the directory for Jekyll so we can use @imports.
 sass:
   sass_dir: _sass
   style: :compressed
