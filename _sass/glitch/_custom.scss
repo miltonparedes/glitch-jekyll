@@ -2,14 +2,14 @@
   .hero{
     background: $body-bg-alter;
     min-width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     padding-top: calc((50vh - 70px) - 7rem)
   }
   .title{
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
-  .glitch::after, .glitch::before{
+  .glitch-text::after, .glitch-text::before{
     background: $body-bg-alter;
   }
   .bottom{

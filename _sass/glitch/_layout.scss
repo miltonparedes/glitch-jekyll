@@ -9,3 +9,12 @@
   margin-left:  auto;
   margin-right: auto;
 }
+#blog .container{
+  max-width: 58rem;
+  padding: 0;
+}
+header, .sub-header{
+  .container{
+    max-width: 58rem;
+  }
+}
