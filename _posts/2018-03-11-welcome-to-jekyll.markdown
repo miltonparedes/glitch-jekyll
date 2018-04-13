@@ -1,10 +1,12 @@
 ---
 layout: post
+cover: '/assets/img/hannah-cover.jpg'
 title:  "Welcome to Jekyll!"
-date:   2018-03-11 10:41:04 -0600
+date:   2018-03-11 10:41:04
 description:  Write a short, very short description of your post here, for the search engine.
 categories: jekyll update
 comments: false
+nav_invert: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
