@@ -3,17 +3,40 @@
 // Super small header above the content for site name and short description.
 
 .header{
-  height: 70px !important;
+  height: 100px !important;
   background: $body-bg;
+  overflow: hidden;
   overflow-x: auto;
+  &.invert{
+    background: $body-bg-alter;
+  }
   nav{
     position: relative;
     min-width: 100%;
     z-index: 10;
+    a.home{
+      padding: .8rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: normal;
+      line-height: 1;
+      border: 2px solid;
+      border-radius: 3px;
+      box-shadow: 4px 5px 0 0 #bcbcbc;
+      transition: all 0.3s ease;
+      &:hover, &:active, &:hover{
+        background: $color-one;
+        color: $body-bg;
+        border: 2px solid $color-one;
+        box-shadow: 0 0 1px rgba(39,44,49,0.1),0 3px 16px rgba(39,44,49,0.07);
+        transform: translate3D(0, -1px, 0);
+      }
+    }
     ul{
       display: flex;
       padding: 0;
-      line-height: 70px;
+      line-height: 100px;
       font-weight: bold;
       text-transform: uppercase;
       vertical-align: middle;
@@ -30,20 +53,19 @@
           color: $gray-4;
           border-bottom: 0;
           &:hover{
-            color: $pink;
+            color: $color-one;
           }
         }
       }
     }
   }
   .active{
-    color: $pink;
+    color: $color-one;
   }
 }
 .sub-header{
   background: $body-bg-alter;
   padding: 2.5rem 0 2.5rem 0;
-  margin-bottom: 2rem;
   .title{
     font-weight: bold;
     text-transform: lowercase;

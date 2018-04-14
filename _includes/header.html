@@ -3,15 +3,11 @@
   <div class="container">
     <nav>
       <ul>
-          {% for node in pages_list %}
-            {% if node.title != null %}
-              {% if node.in_nav %}
-                <li><a {% if page.title == node.title %}class="active"{% endif %} href="{{site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
-              {% endif %}
-            {% endif %}
+        <li><a class="home" href="{{site.baseurl}}/">GH</a></li>
+          {% for node in site.data.navigation %}
+            <li><a {% if page.title == node[1].title %}class="active"{% endif %} href="{{ node[1].url }}" target="{{node[1].target}}">{{ node[1].title }}</a></li>
           {% endfor %}
       </ul>
-      {{test}}
     </nav>
   </div>
 </header>
