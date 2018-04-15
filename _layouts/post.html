@@ -3,24 +3,45 @@ layout: default
 ---
 
 <article class="post">
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-  {{ content }}
+  <div class="container">
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+    {{ content }}
+  </div>
 </article>
-
-{% if site.related_posts != empty %}
-<aside class="related">
-  <h3>Related posts</h3>
-  <ul class="related-posts">
+<div class="related container">
+  {% if site.related_posts != empty %}
+  <aside class="post-feed">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-        </a>
-      </li>
+    <article class="post-card {{ page.class }}{% unless post.cover %} no-image{% endunless %}">
+        {% if post.cover %}
+            <a class="post-card-image-link" href="{{ site.baseurl }}/{{ post.url | remove_first: '/' }}">
+                <div class="glitch-img post-card-image">
+                  <div class="glitch__img" style="background-image: url({{ site.baseurl }}{{ post.cover }})"></div>
+                  <div class="glitch__img" style="background-image: url({{ site.baseurl }}{{ post.cover }})"></div>
+                  <div class="glitch__img" style="background-image: url({{ site.baseurl }}{{ post.cover }})"></div>
+                  <div class="glitch__img" style="background-image: url({{ site.baseurl }}{{ post.cover }})"></div>
+                  <div class="glitch__img" style="background-image: url({{ site.baseurl }}{{ post.cover }})"></div>
+                </div>
+            </a>
+        {% endif %}
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="{{ site.baseurl }}/{{ post.url | remove_first: '/' }}">
+                <header class="post-card-header">
+                    <h3 class="post-card-title">{{ post.title }}</h3>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>{{ post.content | strip_html | truncatewords: 20, "" }}...</p>
+                </section>
+            </a>
+        </div>
+    </article>
     {% endfor %}
-  </ul>
-</aside>
-{% endif %}
-
-{% include disqus.html %}
+  </aside>
+  {% endif %}
+</div>
+<div class="container">
+  <hr>
+  {% if env == "production" %}
+    {% include disqus.html %}
+  {% endif %}
+</div>
