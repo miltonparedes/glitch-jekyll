@@ -21,8 +21,9 @@
       <h1 class="title"><div class="glitch-text" data-text="{{ page.title }}">{{ page.title }}</div></h1>
       {% endif %}
       <ul>
-        {% if page.submenu %}
-        <li><a href="{{ site.baseurl }}/archive#all">archive</a></li>
+        {% if page.submenu or page.layout == "category" or page.layout == "tag" %}
+        <li><a href="{{ site.baseurl }}/archive">archive</a></li>
+        <li><a href="{{ site.baseurl }}/tags">tags</a></li>
         <li><a href="{{ site.baseurl }}/search">search</a></li>
         {% endif %}
         {% if page.layout == "post"  %}
