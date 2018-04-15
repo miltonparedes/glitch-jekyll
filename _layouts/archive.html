@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<ul class="nav-archive">
+  <li><a href="{{site.baseurl}}/archive">All</a></li>
+  {% for category in site.categories %}
+    <li><a href="{{site.baseurl}}/{{ category | first | replace: ' ','-' }}">{{ category | first }}</a></li>
+  {% endfor %}
+</ul>
+<div class="archive-list">
+{% if page.title != "Archive" %}
+{% for post in page.posts %}
+  {% assign currentDate = post.date | date: "%Y" %}
+  {% if currentDate != myDate %}
+    {% unless forloop.first %}
+      </ul>
+    {% endunless %}
+    <h1><a href="{{site.baseurl}}/{{ currentDate }}">{{ currentDate }}</a></h1>
+    <ul>
+    {% assign myDate = currentDate %}
+  {% endif %}
+  <li><time><a href="{{site.baseurl}}/{{ post.date | date: "%Y/%m/%d" }}">{{ post.date | date: "%-d %B %Y" }}</a></time><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+  {% if forloop.last %}
+    </ul>
+  {% endif %}
+{% endfor %}
+{% else %}
+  {{content}}
+{% endif %}
+</div>

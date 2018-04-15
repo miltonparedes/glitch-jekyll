@@ -1,4 +1,5 @@
 .nav-archive{
+  margin: 2rem 0;
   li{
   font-size: .8rem;
   list-style: none;
@@ -6,7 +7,11 @@
     a{
       border-bottom-color: transparent;
       font-family: $code-font-family;
-      color: #555;
+      color: $li-link-color;
+      &:hover{
+        color: darken($li-link-color, 20%);
+        border-bottom: 0;
+      }
     }
   }
   li ~ li::before{
@@ -15,53 +20,27 @@
     color: $gray-1;
   }
 }
-ul{
-  padding-left: 0;
-  li a{
-    border-bottom-color: transparent;
-    &:hover{
-      border-bottom-color: $li-link-color-border;
+.archive-list{
+  ul{
+    padding-left: 0;
+    li a{
+      border-bottom-color: transparent;
+      &:hover{
+        border-bottom-color: $li-link-color-border;
+      }
     }
   }
-}
-.archive-list{
   li{
   list-style: none;
   margin: 0 0 1rem;
   }
-}
-time{
-  font-size: 0.8rem;
-  color: $gray-2;
-}
-time::after{
-  content: " - ";
-  color: $gray-1;
-}
-.catbloc:not(:target) {
-  display: none;
-}
-.catbloc:target {
-  animation: slidedown .5s 1;
-  -webkit-animation: slidedown .5s 1;
-}
-@keyframes slidedown {
-    from {
-        opacity: 0;
-        transform: translate(0, -50px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-@-webkit-keyframes slidedown {
-    from {
-        opacity: 0;
-        -webkit-transform: translate(0, -50px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translate(0);
-    }
+  time{
+    font-size: 0.8rem;
+    color: $gray-2;
+  }
+  time::after{
+    content: "-";
+    margin:0 .25rem;
+    color: $gray-1;
+  }
 }
