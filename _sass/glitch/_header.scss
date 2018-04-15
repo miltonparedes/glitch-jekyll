@@ -21,14 +21,14 @@
       letter-spacing: 1px;
       font-weight: normal;
       line-height: 1;
-      border: 2px solid;
+      border: 1px solid;
       border-radius: 3px;
       box-shadow: 4px 5px 0 0 #bcbcbc;
-      transition: all 0.3s ease;
-      &:hover, &:active, &:hover{
-        background: $color-one;
-        color: $body-bg;
-        border: 2px solid $color-one;
+      &:hover, &:active, &:focus{
+        transition: all 0.3s ease;
+        border-color: $color-one;
+        color: $color-one;
+        border: 1px solid $color-one;
         box-shadow: 0 0 1px rgba(39,44,49,0.1),0 3px 16px rgba(39,44,49,0.07);
         transform: translate3D(0, -1px, 0);
       }
@@ -48,6 +48,7 @@
         font-size: 14px;
         &:last-child{
           margin-right: 0;
+          padding-right: 1.5rem;
         }
         a{
           color: $gray-4;

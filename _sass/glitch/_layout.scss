@@ -9,12 +9,17 @@
   margin-left:  auto;
   margin-right: auto;
 }
-#blog .container{
-  max-width: 58rem;
+#blog .container, #projects .container{
+  max-width: 50rem;
   padding: 0;
 }
-header, .sub-header{
+.sub-header{
   .container{
-    max-width: 58rem;
+    max-width: 50rem;
+  }
+}
+header{
+  .container{
+    max-width: 65rem;
   }
 }

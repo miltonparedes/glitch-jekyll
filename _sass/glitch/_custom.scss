@@ -2,8 +2,15 @@
   .hero{
     background: $body-bg-alter;
     min-width: 100%;
-    height: calc(100vh - 70px);
-    padding-top: calc((50vh - 70px) - 7rem)
+    height: calc(100vh - 100px);
+    padding-top: calc((50vh - 100px) - 7rem);
+    .container{
+      max-width: 50rem;
+    }
+    h1, p{
+      max-width: 35rem;
+      text-align: left;
+    }
   }
   .title{
     font-weight: bold;
@@ -31,7 +38,7 @@
       vertical-align: middle;
     }
   }
-  #about{
+  #more{
     padding-top: 2rem;
   }
   h1, h2{
@@ -39,12 +46,6 @@
   }
   h3, p, ul{
     text-align: center;
-  }
-  p a{
-    border-bottom-color: $li-link-color-border;
-    &:hover{
-      border-bottom-color: inherit;
-    }
   }
   ul{
     list-style: none;
