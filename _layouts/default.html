@@ -4,9 +4,9 @@
   <body>
     {% include header.html %}
     <main id="{{ page.title | downcase | replace: " ", "-" }}">
-    {% if page.title != "Home" %}<div class="container">{% endif %}
+    {% if page.title != "Home" and page.layout != "post" %}<div class="container">{% endif %}
         {{ content }}
-    {% if page.title != "Home" %}</div>{% endif %}
+    {% if page.title != "Home" and page.layout != "post" %}</div>{% endif %}
     </main>
     {% include footer.html %}
 
