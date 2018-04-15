@@ -1,10 +1,11 @@
 ---
 layout: post
-cover: '/assets/img/hannah-cover.jpg'
-title:  "Welcome to Jekyll!"
-date:   2018-03-11 10:41:04
-description:  Write a short, very short description of your post here, for the search engine.
+cover: /assets/img/1.png
+title: Welcome to Jekyll!
+date: 2018-03-11 10:41:04
+description: Write a short, very short description of your post here, for the search engine.
 categories: jekyll update
+tags: hola hello
 comments: false
 nav_invert: true
 ---

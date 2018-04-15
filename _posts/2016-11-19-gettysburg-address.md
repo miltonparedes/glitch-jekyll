@@ -2,7 +2,7 @@
 layout: post
 cover: /assets/img/bus.jpg
 title: Gettysburg Address
-date: 1863-11-19 10:18:00
+date: 2016-11-19 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
 categories: junk
 comments: false

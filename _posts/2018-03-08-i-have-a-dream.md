@@ -2,7 +2,7 @@
 layout: post
 cover: /assets/img/sky.jpg
 title: I Have a Dream
-date: 1963-08-28 10:18:00
+date: 2018-03-08 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
 categories: junk
 comments: false

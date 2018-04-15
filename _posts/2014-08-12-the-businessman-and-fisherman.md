@@ -1,10 +1,11 @@
 ---
 layout: post
-cover: /assets/img/water.jpg
+cover: /assets/img/2.jpg
 title: The Businessman & The Fisherman
 date: 2014-08-12 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
 categories: junk
+tags: test tech software
 comments: false
 ---
 
