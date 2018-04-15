@@ -79,7 +79,7 @@
   background: $body-bg;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 4s infinite linear alternate-reverse;
+  animation: noise-anim 8s infinite linear alternate-reverse;
 }
 
 @keyframes noise-anim-2 {
@@ -157,7 +157,7 @@
   background: $body-bg;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 5s infinite linear alternate-reverse;
+  animation: noise-anim-2 6s infinite linear alternate-reverse;
 }
 
 .glitch-img {

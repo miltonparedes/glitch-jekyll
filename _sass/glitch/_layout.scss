@@ -9,9 +9,11 @@
   margin-left:  auto;
   margin-right: auto;
 }
-#blog .container, #projects .container{
-  max-width: 50rem;
-  padding: 0;
+#blog, #projects, .tag{
+  .container{
+    max-width: 50rem;
+    padding: 0;
+  }
 }
 .sub-header{
   .container{
