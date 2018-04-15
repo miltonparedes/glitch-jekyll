@@ -5,7 +5,7 @@ title: The Businessman & The Fisherman
 date: 2014-08-12 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
 categories: junk
-tags: test tech software
+tags: test python software
 comments: false
 ---
 

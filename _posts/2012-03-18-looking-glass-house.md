@@ -5,6 +5,7 @@ title: Looking-Glass house
 date: 2012-03-18 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
 categories: junk
+tags: [machine learning, big data]
 comments: false
 ---
 
