@@ -4,18 +4,27 @@ title: Projects
 permalink: projects
 in_nav: 2
 ---
-<div class="feed">
+<div class="post-feed">
   {% for project in site.data.projects %}
-      <article class="project-card">
+      <article class="post-card">
         <a class="card-image-link" href="{{ project[1].web }}" target="_blank">
           <img src="{{project[1].img_url}}" alt="">
         </a>
-        <div class="card-content">
+        <div class="post-card-content">
           <div class="post-card-header">
               <h3 class="post-card-title">{{ project[1].title }}</h3>
           </div>
           <div class="post-card-excerpt">
               <p>{{ project[1].description | strip_html | truncatewords: 10, "" }}</p>
+          </div>
+          <div class="icons">
+            <a href="{{ project[1].repo }}" title="Repo" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </a>
+
+            <a href="{{ project[1].web }}" title="Website" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
           </div>
         </div>
       </article>
