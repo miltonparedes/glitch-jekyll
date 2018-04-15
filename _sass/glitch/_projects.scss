@@ -1,40 +1,12 @@
 #projects{
-  .feed {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 40px 0 0 0;
-  }
-
-  .project-card {
-    flex: 1 1 215.333px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 0 8px 16px;
+  .post-card {
     padding: 1rem 0 0;
     min-height: 100px;
-    background: #fff center center;
-    background-size: cover;
-    border-radius: 5px;
-    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
-    transition: all 0.5s ease;
-    &:hover {
-      box-shadow: 0 0 1px rgba(39,44,49,0.10), 0 3px 16px rgba(39, 44, 49,0.07);
-      transition: all 0.3s ease;
-      transform: translate3D(0, -1px, 0);
-    }
     a{
       border-bottom: 0;
     }
   }
   .card-image-link {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 5px 5px 0 0;
-
     img{
       width: 70px;
       height: 70px;
@@ -42,29 +14,16 @@
       margin: 0 auto;
     }
   }
-  .post-card-image {
-    width: auto;
-    height: 200px;
-  }
-  .post-card-tags {
-    display: block;
-    margin-bottom: 4px;
-    color: var(--midgrey);
-    font-size: 1.2rem;
-    line-height: 1.15em;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  .post-card-title {
-    margin-top: 0;
-  }
-  .card-content {
+  .post-card-content {
     padding: 1rem;
     text-align: center;
   }
-  .post-card-meta {
-    padding: 0 25px 25px;
+  .icons{
+    a{
+      color: $gray-4;
+      &:hover{
+        color: $color-one;
+      }
+    }
   }
-
 }

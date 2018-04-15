@@ -2,10 +2,13 @@ blog:
   title: Blog
   url: /blog
   target: _self
+
 projects:
   title: Projects
   url: /projects
   target: _self
+
+# External link
 source:
   title: Source
   url: https://github.com/miltonolaf/glitch-jekyll
