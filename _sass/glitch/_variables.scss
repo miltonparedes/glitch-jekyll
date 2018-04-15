@@ -11,9 +11,9 @@ $gray-5: #2b2b2b;
 // #1c1c1c
 
 
-// Glitch colors
-$blue: #5AE8FD;
-$pink: #FC5AE7;
+// Glitch global colors
+$color-one: #FC5AE7;
+$color-two: #5AE8FD;
 
 
 // Root
@@ -27,7 +27,7 @@ $body-bg-alter: #f7fbfb;
 
 
 // Links
-$link-color: darken($blue, 9%);
+$link-color: darken($color-two, 9%);
 
 
 // h* fonts
@@ -37,7 +37,7 @@ $h-font: 'Frank Ruhl Libre', serif;
 // Lists
 $li-color: lighten($body-color, 5%);
 $li-link-color: lighten($gray-4, 10%);
-$li-link-color-border: $pink;
+$li-link-color-border: $color-one;
 
 $border-color: #e5e5e5;
 
