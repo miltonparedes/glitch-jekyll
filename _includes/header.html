@@ -18,10 +18,19 @@
       {% if page.layout == "post"%}
       <h1><span class="m">{{page.title}}</span></h1>
       {% else %}
-      <h1 class="title"><div class="glitch-text" data-text="{{ page.title }}">{{ page.title }}</div></h1>
+      {% case page.type %}
+        {% when 'year' %}
+           <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%Y" }}">{{ page.date | date: "%Y" }}</div></h1>
+        {% when 'month' %}
+           <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%m/%Y" }}">{{ page.date | date: "%m/%Y" }}</div></h1>
+        {% when 'day' %}
+          <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%d/%m/%Y" }}">{{ page.date | date: "%d/%m/%Y" }}</div></h1>
+        {% else %}
+           <h1 class="title"><div class="glitch-text" data-text="{{ page.title }}">{{ page.title }}</div></h1>
+      {% endcase %}
       {% endif %}
       <ul>
-        {% if page.submenu or page.layout == "category" or page.layout == "tag" %}
+        {% if page.submenu or page.layout == "archive" or page.layout == "tag" %}
         <li><a href="{{ site.baseurl }}/archive">archive</a></li>
         <li><a href="{{ site.baseurl }}/tags">tags</a></li>
         <li><a href="{{ site.baseurl }}/search">search</a></li>

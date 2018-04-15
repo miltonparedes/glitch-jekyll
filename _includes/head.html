@@ -5,7 +5,16 @@
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+      {% case page.type %}
+        {% when 'year' %}
+          {{ page.date | date: "%Y" }} &middot; {{ site.title }}
+        {% when 'month' %}
+          {{ page.date | date: "%m/%Y" }} &middot; {{ site.title }}
+        {% when 'day' %}
+          {{ page.date | date: "%d/%m/%Y" }} &middot; {{ site.title }}
+        {% else %}
+          {{ page.title }} &middot; {{ site.title }}
+      {% endcase %}
     {% endif %}
   </title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
