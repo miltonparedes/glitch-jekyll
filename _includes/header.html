@@ -5,7 +5,7 @@
       <ul>
         <li><a class="home" href="{{site.baseurl}}/">GH</a></li>
           {% for node in site.data.navigation %}
-            <li><a {% if page.title == node[1].title %}class="active"{% endif %} href="{{ node[1].url }}" target="{{node[1].target}}">{{ node[1].title }}</a></li>
+            <li><a {% if page.title == node[1].title %}class="active"{% endif %} href="{{site.baseurl}}/{{ node[1].url }}" target="{{node[1].target}}">{{ node[1].title }}</a></li>
           {% endfor %}
       </ul>
     </nav>
@@ -45,7 +45,6 @@
           {% endif %}
         </div>
       {% endif %}
-      <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix><feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite></filter></defs></svg>
     </div>
   </div>
 {% endif %}
