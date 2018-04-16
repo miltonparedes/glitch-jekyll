@@ -29,7 +29,6 @@ social:
 favicon: favicon.png # favicon name in assets/img/
 
 permalink: /:year/:month/:title/
-
 jekyll-archives:
   enabled: all
   layouts:
