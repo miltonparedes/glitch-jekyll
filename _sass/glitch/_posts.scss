@@ -3,7 +3,7 @@
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
 .post {
-  margin-bottom: 4em;
+  margin: 2em 0 4em;
   ul{
     padding-left: 2rem;
   }
@@ -15,17 +15,43 @@
   }
 }
 .header-post{
+  padding: 4rem 0;
   background-position: center;
   background-size: cover;
-  padding: 7rem 0;
-  .m{
-    -webkit-filter: url("#goo");
-    filter: url("#goo");
+  color: #fff;
+  position: relative;
+  margin-bottom: 2rem;
+  h1{
+    text-align: center;
+    padding: 1rem 0;
     background: #fff;
-    color: #111;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    padding: 7px 13px 5px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    max-width: 38rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1.5px solid $gray-1;
+    box-shadow: 6px 7px 0 0 #bcbcbc;
+  }
+  .heading-sub{
+    font-family: $root-font-family;
+    font-weight: 400;
+    font-size: .9rem;
+    display: inline-block;
+    color: darken($gray-3, 5%);
+    a{
+      &:first-child{
+        text-transform: uppercase;
+        font-size: 14px;
+        vertical-align: middle;
+        &::after{
+          content: "·";
+          font-size: 1rem;
+          padding: 0 .5rem;
+          color: $gray-2;
+        }
+      }
+    }
   }
 }
 // Blog post or page title
@@ -37,15 +63,6 @@
 .post-title {
   margin-top: 0;
 }
-
-// Meta data line below post title
-.post-date {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: #9a9a9a;
-}
-
 
 // Related posts
 .container.related {

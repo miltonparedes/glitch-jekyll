@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main id="{{ page.title | downcase | replace: " ", "-" }}">
+    <main{% if page.layout != "post" %} id="{{ page.title | downcase | replace: " ", "-" }}"{% endif %}>
     {% if page.title != "Home" and page.layout != "post" and layout.auto_container != false %}<div class="container">{% endif %}
         {{ content }}
     {% if page.title != "Home" and page.layout != "post" %}</div>{% endif %}

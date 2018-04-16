@@ -12,39 +12,40 @@
   </div>
 </header>
 {% if page.title != "Home" %}
-<div class="sub-header{% if page.layout == "post" %} header-post{% endif %}"{% if page.layout == "post" %}style="background-image: url({{ site.baseurl }}{{ page.cover }})"{% endif %}>
-  <div class="container">
-    <div class="inline-header">
+  <div class="sub-header{% if page.layout == "post" %} header-post{% endif %}"{% if page.layout == "post" %}style="background-image: url({{ site.baseurl }}{{ page.cover }})"{% endif %}>
+    <div class="container">
       {% if page.layout == "post"%}
-      <h1><span class="m">{{page.title}}</span></h1>
+        <h1>
+          {{page.title}}<br>
+          <div class="heading-sub">
+            <a href="{{site.baseurl}}/{{ page.date | date: "%Y/%m/%d" }}"><time datetime="{{ page.date | date: "%d/%m/%Y" }}">{{ page.date | date: "%b %d, %Y" }}</time></a>
+            {% for node in page.categories %}
+              <a href="{{site.baseurl}}/{{ node | replace: ' ','-' }}">{{ node }}</a>
+            {% endfor %}
+          </div>
+        </h1>
       {% else %}
-      {% case page.type %}
-        {% when 'year' %}
-           <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%Y" }}">{{ page.date | date: "%Y" }}</div></h1>
-        {% when 'month' %}
-           <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%m/%Y" }}">{{ page.date | date: "%m/%Y" }}</div></h1>
-        {% when 'day' %}
-          <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%d/%m/%Y" }}">{{ page.date | date: "%d/%m/%Y" }}</div></h1>
-        {% else %}
-           <h1 class="title"><div class="glitch-text" data-text="{{ page.title }}">{{ page.title }}</div></h1>
-      {% endcase %}
-      {% endif %}
-      <ul>
-        {% if page.submenu or page.layout == "archive" or page.layout == "tag" %}
-        <li><a href="{{ site.baseurl }}/archive">archive</a></li>
-        <li><a href="{{ site.baseurl }}/tags">tags</a></li>
-        <li><a href="{{ site.baseurl }}/search">search</a></li>
-        {% endif %}
-        {% if page.layout == "post"  %}
-        <div class="m">
-          {% for node in page.categories %}
-          <li><a href="{{site.baseurl}}/archive#{{ node | replace: ' ','-' }}">{{ node }}</a></li>
-          {% endfor %}
+        <div class="inline-header">
+          {% case page.type %}
+            {% when 'year' %}
+                 <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%Y" }}">{{ page.date | date: "%Y" }}</div></h1>
+            {% when 'month' %}
+                 <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%m/%Y" }}">{{ page.date | date: "%m/%Y" }}</div></h1>
+            {% when 'day' %}
+                <h1 class="title"><div class="glitch-text" data-text="{{ page.date | date: "%d/%m/%Y" }}">{{ page.date | date: "%d/%m/%Y" }}</div></h1>
+            {% else %}
+               <h1 class="title"><div class="glitch-text" data-text="{{ page.title }}">{{ page.title }}</div></h1>
+          {% endcase %}
+          {% if page.submenu or page.layout == "archive" or page.layout == "tag" %}
+            <ul>
+              <li><a href="{{ site.baseurl }}/archive">archive</a></li>
+              <li><a href="{{ site.baseurl }}/tags">tags</a></li>
+              <li><a href="{{ site.baseurl }}/search">search</a></li>
+            </ul>
+          {% endif %}
         </div>
-        {% endif %}
-      </ul>
+      {% endif %}
       <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix><feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite></filter></defs></svg>
     </div>
   </div>
-</div>
 {% endif %}
