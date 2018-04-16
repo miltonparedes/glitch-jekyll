@@ -1,11 +1,11 @@
 blog:
   title: Blog
-  url: /blog
+  url: blog
   target: _self
 
 projects:
   title: Projects
-  url: /projects
+  url: projects
   target: _self
 
 # External link

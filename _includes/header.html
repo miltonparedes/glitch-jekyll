@@ -5,7 +5,7 @@
       <ul>
         <li><a class="home" href="{{site.baseurl}}/">GH</a></li>
           {% for node in site.data.navigation %}
-            <li><a {% if page.title == node[1].title %}class="active"{% endif %} href="{{site.baseurl}}/{{ node[1].url }}" target="{{node[1].target}}">{{ node[1].title }}</a></li>
+            <li><a {% if page.title == node[1].title %}class="active"{% endif %} href="{{ node[1].url }}" target="{{node[1].target}}">{{ node[1].title }}</a></li>
           {% endfor %}
       </ul>
     </nav>
