@@ -1,5 +1,6 @@
 # Website info
 title: Glitch Theme
+acronym: gh
 tagline: A simple and cool theme for Jekyll and GitHub Pages.
 email: hey@miltonolaf.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -12,7 +13,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 paginate: 6
 paginate_path: /blog/:num/
-
 # Social users - twitter, instagram, github, gitlab, codepen profile, youtube and facebook
 social:
   twitter: olafmilton
