@@ -17,7 +17,6 @@
     a.home{
       padding: .8rem;
       font-size: 16px;
-      text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: normal;
       line-height: 1;
@@ -38,7 +37,6 @@
       padding: 0;
       line-height: 100px;
       font-weight: bold;
-      text-transform: uppercase;
       vertical-align: middle;
       margin: 0;
       li{
@@ -69,7 +67,6 @@
   padding: 2.5rem 0 2.5rem 0;
   .title{
     font-weight: bold;
-    text-transform: lowercase;
     font-size: 2.2rem;
     .glitch-text::after, .glitch-text::before{
       background: $body-bg-alter;

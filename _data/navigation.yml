@@ -11,5 +11,6 @@ projects:
 # External link
 source:
   title: Source
+  type: external
   url: https://github.com/miltonolaf/glitch-jekyll
   target: _blank
