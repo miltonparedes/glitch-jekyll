@@ -29,20 +29,6 @@ social:
 favicon: favicon.png # favicon name in assets/img/
 
 permalink: /:year/:month/:title/
-jekyll-archives:
-  enabled: all
-  layouts:
-    year: archive
-    month: archive
-    day: archive
-    tag: tag
-    category: archive
-  permalinks:
-    year: /:year/
-    month: /:year/:month/
-    day: /:year/:month/:day/
-    tag: /tags/:name/
-    category: /:name/
 
 # Assets - We specify the directory for Jekyll so we can use @imports.
 sass:
@@ -58,3 +44,4 @@ exclude:
   - README.md
   - .git*
   - .gitignore
+  - vendor
