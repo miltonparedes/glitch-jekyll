@@ -25,6 +25,15 @@ social:
   facebook: miltonolaf
   instagram: username
 
+# Compress html
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  startings: [html, head, body]
 
 favicon: favicon.png # favicon name in assets/img/
 
