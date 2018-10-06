@@ -18,9 +18,9 @@
         <h1>
           {{page.title}}<br>
           <div class="heading-sub">
-            <a href="{{site.baseurl}}/{{ page.date | date: "%Y/%m/%d" }}"><time datetime="{{ page.date | date: "%d/%m/%Y" }}">{{ page.date | date: "%b %d, %Y" }}</time></a>
+            <a><time datetime="{{ page.date | date: "%d/%m/%Y" }}">{{ page.date | date: "%b %d, %Y" }}</time></a>
             {% for node in page.categories %}
-              <a href="{{site.baseurl}}/{{ node | replace: ' ','-' }}">{{ node }}</a>
+              <a href="{{site.url}}/search/?q={{ node | replace: ' ','-' }}">{{ node }}</a>
             {% endfor %}
           </div>
         </h1>
@@ -38,8 +38,6 @@
           {% endcase %}
           {% if page.submenu or page.layout == "archive" or page.layout == "tag" %}
             <ul>
-              <li><a href="{{ site.baseurl }}/archive">archive</a></li>
-              <li><a href="{{ site.baseurl }}/tags">tags</a></li>
               <li><a href="{{ site.baseurl }}/search">search</a></li>
             </ul>
           {% endif %}
