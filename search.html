@@ -3,14 +3,9 @@ layout: default
 title: Search
 submenu: true
 ---
-
-<input type="text" id="search-input" placeholder="Search...">
-<ul id="results-container"></ul>
-<script src="{{ site.baseurl }}/assets/js/search.js" type="text/javascript"></script>
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '{{ site.baseurl }}/search.json'
-})
-</script>
+<form action="" method="get">
+  <label for="search-box">Search</label>
+  <input type="text" id="search-box" name="q">
+  <input type="submit" value="search">
+</form>
+<ul id="search-results"></ul>
